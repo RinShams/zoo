@@ -1,9 +1,0 @@
-{
-"DataBase":{
-    "host": "localhost",
-    "port": "3306",
-    "name": "zoo",
-    "user": "root",
-    "password": ""
-}
-}
