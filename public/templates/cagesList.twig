@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+{% block div %}
+    <div style="background-color: #f0ffe6;">
+        <h3>Наши вольеры:</h3>
+        <ul>
+            {% for cage in data %}
+                <li><a href="/?method=getCageAllInfo&id={{cage.id}}">№ {{cage.number}}, кол-во обитателей: {{cage.petAmount}} </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

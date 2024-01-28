@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+{% block div %}
+    <div style="background-color: #f0ffe6;">
+        <h3> Наши питомцы: </h3>
+        <ul>
+            {% for pet in data %}
+                <li><a href="/?method=getPetAllInfo&id={{pet.id}}"> {{ pet.species}}  {{pet.name}} </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

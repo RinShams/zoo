@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+
+{% block div %} 
+<table> 
+    <tr>
+        <td> 
+            <img src="public\petsPhotos\{{pet.img}}" height="300px" alt="">
+        </td>
+        <td width="25%">         
+            <h4>Имя: {{ pet.name }}</h4>
+
+            {% if pet.isMale == 0 %}
+                <p>самка</p>
+                {% else %}
+                <p>самец</p>
+            {% endif %}
+
+            <p>Вид: {{pet.species}}</p>
+            <p>Род: {{pet.genus}}</p>
+            <p>Отряд: {{pet.order_}}</p>
+            <p>Класс: {{pet.class}}</p>
+        </td>
+        <td>
+            <p>Дата рождения: {{ pet.birthDate }} </p>
+            <p>Место рождения: {{pet.birthPlace}}</p>
+            <p>Описание: {{pet.comment}}</p> 
+            <p>№ вольера: <a href="/?method=getCageAllInfo&id={{pet.cageId}}"> {{pet.cageNumber}} </a></p> 
+        </td>            
+    </tr>
+</table>
+{% endblock %} 
