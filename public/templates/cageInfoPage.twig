@@ -1,0 +1,30 @@
+{% extends 'base.twig' %}
+
+{% block div %}    
+    <table> 
+        <tr>
+            <td width="350px">
+                <h3>Номер вольера: {{ cage.number }}</h3>
+                <p>Площадь: {{ cage.area }} </p>
+
+                {% if cage.hasPool == 0 %}
+                    <p>без бассейна</p>
+                    {% else %}
+                    <p>есть бассейн</p>
+                {% endif %}
+
+                {% if cage.hasStrongerFence == 0 %}
+                    <p>обычное ограждение</p>
+                    {% else %}
+                    <p>укрепленное ограждение</p>
+                {% endif %}
+            </td>
+            <td>            
+                <h4>кол-во обитателей: {{ cage.petAmount }} </h4>
+                {% for pet in pets %}
+                    <li><a href="/?method=getPetAllInfo&id={{pet.id}}">{{ pet.species}}  {{pet.name}} </a></li>
+                {% endfor %}
+            </td> 
+        </tr>    
+    </table>     
+{% endblock %} 

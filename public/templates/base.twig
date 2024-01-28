@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Park Internal Site</title>
+    <link href="public\css\styles.css" rel="stylesheet" > 
+</head>
+<body >
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/?method=getPets">Животные</a></li>
+                <li><a href="/?method=getCages">Вольеры</a></li>
+                <li><a href="/?method=getFoodInfo">Корма</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block div %}{% endblock %}
+    
+</body>
+</html>
